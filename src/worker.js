@@ -1,11 +1,21 @@
-// Cloudflare Pages Function: POST /api/lead
-// Пересылает заявку с сайта в Telegram.
-// Переменные окружения (Cloudflare → Settings → Variables and Secrets):
+// Cloudflare Worker: отдаёт сайт из папки public/ и принимает заявки на POST /api/lead.
+// Заявки пересылаются в Telegram. Переменные (Cloudflare → Settings → Variables and Secrets):
 //   TELEGRAM_BOT_TOKEN — токен бота от @BotFather
 //   TELEGRAM_CHAT_ID   — id чата, куда слать заявки
-// Если переменные не заданы, работает в демо-режиме и ничего не отправляет.
+// Если переменные не заданы, форма работает в демо-режиме и ничего не отправляет.
 
-export async function onRequestPost({ request, env }) {
+export default {
+  async fetch(request, env) {
+    const url = new URL(request.url);
+    if (url.pathname === "/api/lead") {
+      if (request.method !== "POST") return json({ ok: false, error: "method" }, 405);
+      return handleLead(request, env);
+    }
+    return env.ASSETS.fetch(request);
+  },
+};
+
+async function handleLead(request, env) {
   let data;
   try {
     data = await request.json();

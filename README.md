@@ -2,13 +2,15 @@
 
 Одностраничный сайт (лендинг) для курсов английского и IELTS. Данные вымышлены, сайт сделан для портфолио.
 
-- `index.html` — весь сайт: разметка, стили и скрипты в одном файле. Языки: русский и узбекский.
-- `favicon.svg` — иконка сайта.
-- `functions/api/lead.js` — отправка заявок с формы в Telegram (Cloudflare Pages Function).
+- `public/index.html` — весь сайт: разметка, стили и скрипты в одном файле. Языки: русский и узбекский.
+- `public/favicon.svg` — иконка сайта.
+- `src/worker.js` — Cloudflare Worker: отдаёт сайт и пересылает заявки с формы в Telegram.
+- `wrangler.jsonc` — настройки Cloudflare.
 
-## Публикация на Cloudflare Pages
+## Публикация
 
-1. Cloudflare → Workers & Pages → Create → Pages → Connect to Git → выбрать этот репозиторий.
-2. Build command: пусто. Output directory: `/`.
-3. Чтобы заявки приходили в Telegram, в Settings → Variables and Secrets добавить
-   `TELEGRAM_BOT_TOKEN` и `TELEGRAM_CHAT_ID`. Без них форма работает в демо-режиме.
+Репозиторий подключён к Cloudflare Workers: каждый push в `main` автоматически публикует сайт
+(команда деплоя `npx wrangler deploy`).
+
+Чтобы заявки приходили в Telegram, в Cloudflare → проект → Settings → Variables and Secrets добавить
+`TELEGRAM_BOT_TOKEN` и `TELEGRAM_CHAT_ID` (тип Secret). Без них форма работает в демо-режиме.

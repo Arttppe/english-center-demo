@@ -1,0 +1,448 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Bright English — курсы английского и IELTS в Ташкенте</title>
+<meta name="description" content="Курсы английского языка и подготовка к IELTS в Ташкенте. Бесплатный пробный урок, опытные преподаватели, группы и индивидуально.">
+<meta name="theme-color" content="#0b2a5b">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Bright English — курсы английского и IELTS в Ташкенте">
+<meta property="og:description" content="Бесплатный пробный урок. General English, IELTS, Kids, Speaking Club.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<style>
+:root{
+  --navy:#0b2a5b; --navy-2:#123a7a; --yellow:#ffc93c; --yellow-d:#f2b705;
+  --ink:#1b2333; --muted:#5b6578; --line:#e3e8f0; --bg:#ffffff; --soft:#f4f7fc;
+  --radius:16px; --shadow:0 6px 24px rgba(11,42,91,.08);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55;font-size:16px}
+img,svg{max-width:100%;display:block}
+a{color:inherit}
+.container{width:100%;max-width:1120px;margin:0 auto;padding:0 16px}
+h1,h2,h3{line-height:1.2;margin:0 0 .5em;color:var(--navy)}
+h1{font-size:clamp(28px,7vw,52px);letter-spacing:-.02em}
+h2{font-size:clamp(24px,5vw,36px);letter-spacing:-.01em}
+h3{font-size:19px}
+p{margin:0 0 1em}
+section{padding:56px 0}
+.section-lead{color:var(--muted);max-width:620px;margin-bottom:28px}
+
+/* demo ribbon */
+.demo-bar{background:var(--yellow);color:var(--navy);font-size:13px;text-align:center;padding:6px 16px;font-weight:600}
+
+/* header */
+header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.96);backdrop-filter:saturate(180%) blur(8px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:64px;gap:12px}
+.logo{display:flex;align-items:center;gap:8px;font-weight:800;font-size:20px;color:var(--navy);text-decoration:none}
+.logo-mark{width:34px;height:34px;border-radius:10px;background:var(--navy);display:grid;place-items:center;color:var(--yellow);font-size:18px}
+.nav-links{display:none;gap:24px;list-style:none;margin:0;padding:0}
+.nav-links a{text-decoration:none;color:var(--ink);font-weight:500}
+.nav-links a:hover{color:var(--navy-2)}
+.nav-right{display:flex;align-items:center;gap:8px}
+.lang{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden}
+.lang button{border:0;background:none;padding:8px 12px;font:inherit;font-size:14px;font-weight:600;color:var(--muted);cursor:pointer;min-height:40px}
+.lang button[aria-pressed="true"]{background:var(--navy);color:#fff}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:12px 22px;border-radius:12px;border:0;font:inherit;font-weight:700;text-decoration:none;cursor:pointer;transition:transform .15s,background .15s}
+.btn:active{transform:scale(.98)}
+.btn-primary{background:var(--yellow);color:var(--navy)}
+.btn-primary:hover{background:var(--yellow-d)}
+.btn-outline{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.5)}
+.btn-outline:hover{border-color:#fff}
+.nav .btn{display:none;min-height:42px;padding:8px 16px}
+
+/* hero */
+.hero{background:linear-gradient(160deg,var(--navy) 0%,var(--navy-2) 100%);color:#fff;padding:48px 0 56px;overflow:hidden}
+.hero h1{color:#fff}
+.hero h1 span{color:var(--yellow)}
+.hero-grid{display:grid;gap:32px;align-items:center}
+.hero p.lead{font-size:18px;opacity:.9;max-width:540px}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin:24px 0 32px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;max-width:520px}
+.stat{background:rgba(255,255,255,.08);border-radius:14px;padding:14px 10px;text-align:center}
+.stat b{display:block;font-size:24px;color:var(--yellow)}
+.stat span{font-size:13px;opacity:.85}
+.hero-art{display:none}
+
+/* cards */
+.grid{display:grid;gap:16px}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow)}
+.course{display:flex;flex-direction:column}
+.course .tag{align-self:flex-start;font-size:12px;font-weight:700;background:var(--soft);color:var(--navy-2);padding:4px 10px;border-radius:999px;margin-bottom:12px}
+.course ul{padding-left:18px;margin:0 0 16px;color:var(--muted)}
+.course .price{margin-top:auto;display:flex;align-items:baseline;justify-content:space-between;gap:8px;border-top:1px solid var(--line);padding-top:14px}
+.course .price b{font-size:20px;color:var(--navy)}
+.course .price small{color:var(--muted)}
+.course.featured{border:2px solid var(--yellow)}
+.soft{background:var(--soft)}
+
+.why{display:flex;gap:14px;align-items:flex-start}
+.why .ico{flex:0 0 44px;height:44px;border-radius:12px;background:var(--navy);color:var(--yellow);display:grid;place-items:center;font-size:20px}
+.why h3{margin-bottom:4px}
+.why p{margin:0;color:var(--muted);font-size:15px}
+
+.teacher{text-align:center}
+.avatar{width:84px;height:84px;border-radius:50%;margin:0 auto 12px;display:grid;place-items:center;font-weight:800;font-size:28px;color:#fff}
+.teacher .score{display:inline-block;background:var(--yellow);color:var(--navy);font-weight:700;font-size:13px;padding:3px 10px;border-radius:999px;margin-bottom:8px}
+.teacher p{color:var(--muted);font-size:15px;margin:0}
+
+.results{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.result{background:#fff;border-radius:14px;padding:16px;text-align:center;border:1px solid var(--line)}
+.result b{display:block;font-size:30px;color:var(--navy)}
+.result span{font-size:14px;color:var(--muted)}
+
+.review p{font-style:italic}
+.review .who{font-weight:700;color:var(--navy);font-style:normal}
+.stars{color:var(--yellow-d);letter-spacing:2px;margin-bottom:8px}
+
+details{background:#fff;border:1px solid var(--line);border-radius:14px;padding:0 18px;margin-bottom:10px}
+summary{cursor:pointer;font-weight:600;padding:16px 0;list-style:none;display:flex;justify-content:space-between;gap:12px;min-height:48px;align-items:center}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:22px;color:var(--navy-2);flex:0 0 auto}
+details[open] summary::after{content:"−"}
+details p{color:var(--muted);margin:0 0 16px}
+
+/* form */
+.contact-grid{display:grid;gap:24px}
+form{display:grid;gap:14px}
+label{font-weight:600;font-size:14px;display:grid;gap:6px}
+input,select{font:inherit;font-size:16px;padding:12px 14px;border:1px solid #cdd5e1;border-radius:12px;min-height:48px;background:#fff;color:var(--ink);width:100%}
+input:focus,select:focus{outline:3px solid rgba(255,201,60,.6);border-color:var(--navy-2)}
+.form-note{font-size:13px;color:var(--muted);margin:0}
+.form-ok{display:none;background:#e9f8ef;border:1px solid #9fdcb6;color:#14532d;border-radius:12px;padding:14px;font-weight:600}
+.contact-list{list-style:none;padding:0;margin:0 0 20px;display:grid;gap:12px}
+.contact-list li{display:flex;gap:10px;align-items:flex-start}
+.contact-list .ico{flex:0 0 24px}
+
+footer{background:var(--navy);color:rgba(255,255,255,.8);padding:28px 0 96px;font-size:14px}
+footer .container{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
+
+/* sticky mobile actions */
+.mobile-bar{position:fixed;left:0;right:0;bottom:0;z-index:30;display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:#fff;border-top:1px solid var(--line);box-shadow:0 -4px 16px rgba(0,0,0,.06)}
+.mobile-bar .btn{min-height:46px;padding:10px;font-size:15px}
+.btn-navy{background:var(--navy);color:#fff}
+.btn-tg{background:#229ed9;color:#fff}
+
+@media (min-width:640px){
+  .grid-2{grid-template-columns:repeat(2,1fr)}
+  .results{grid-template-columns:repeat(4,1fr)}
+}
+@media (min-width:900px){
+  section{padding:80px 0}
+  .nav-links{display:flex}
+  .nav .btn{display:inline-flex}
+  .hero{padding:80px 0}
+  .hero-grid{grid-template-columns:1.2fr .8fr}
+  .hero-art{display:block}
+  .grid-3{grid-template-columns:repeat(3,1fr)}
+  .grid-4{grid-template-columns:repeat(4,1fr)}
+  .contact-grid{grid-template-columns:1fr 1fr;align-items:start}
+  .mobile-bar{display:none}
+  footer{padding-bottom:28px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<div class="demo-bar" data-i18n="demo">Демонстрационный сайт · название и данные вымышлены</div>
+
+<header>
+  <div class="container nav">
+    <a class="logo" href="#top" aria-label="Bright English"><span class="logo-mark">★</span>Bright English</a>
+    <ul class="nav-links">
+      <li><a href="#courses" data-i18n="nav_courses">Курсы</a></li>
+      <li><a href="#teachers" data-i18n="nav_teachers">Преподаватели</a></li>
+      <li><a href="#results" data-i18n="nav_results">Результаты</a></li>
+      <li><a href="#contact" data-i18n="nav_contact">Контакты</a></li>
+    </ul>
+    <div class="nav-right">
+      <div class="lang" role="group" aria-label="Язык / Til">
+        <button type="button" data-lang="ru" aria-pressed="true">RU</button>
+        <button type="button" data-lang="uz" aria-pressed="false">UZ</button>
+      </div>
+      <a class="btn btn-primary" href="#contact" data-i18n="cta_short">Пробный урок</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <h1 data-i18n-html="hero_title">Заговорите на английском <span>уверенно</span></h1>
+        <p class="lead" data-i18n="hero_lead">Курсы General English и подготовка к IELTS в Ташкенте. Маленькие группы, сильные преподаватели и понятный результат.</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#contact" data-i18n="cta_trial">Бесплатный пробный урок</a>
+          <a class="btn btn-outline" href="#courses" data-i18n="cta_courses">Смотреть курсы</a>
+        </div>
+        <div class="stats">
+          <div class="stat"><b>7.0</b><span data-i18n="stat_ielts">средний IELTS</span></div>
+          <div class="stat"><b>1200+</b><span data-i18n="stat_students">выпускников</span></div>
+          <div class="stat"><b>8</b><span data-i18n="stat_years">лет работы</span></div>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <svg viewBox="0 0 360 320" fill="none">
+          <rect x="30" y="40" width="300" height="220" rx="24" fill="#ffffff" fill-opacity=".08"/>
+          <rect x="60" y="70" width="170" height="70" rx="18" fill="#ffc93c"/>
+          <text x="80" y="115" font-family="system-ui,Arial" font-size="26" font-weight="800" fill="#0b2a5b">Hello! 👋</text>
+          <rect x="130" y="160" width="170" height="70" rx="18" fill="#fff"/>
+          <text x="150" y="205" font-family="system-ui,Arial" font-size="24" font-weight="800" fill="#0b2a5b">IELTS 7.5 ✓</text>
+          <circle cx="300" cy="60" r="22" fill="#ffc93c"/>
+          <circle cx="50" cy="270" r="14" fill="#ffffff" fill-opacity=".3"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <section id="courses">
+    <div class="container">
+      <h2 data-i18n="courses_title">Курсы и цены</h2>
+      <p class="section-lead" data-i18n="courses_lead">Определим ваш уровень на бесплатном пробном уроке и подберём подходящую группу.</p>
+      <div class="grid grid-2 grid-4">
+        <article class="card course">
+          <span class="tag" data-i18n="tag_all">Все уровни</span>
+          <h3>General English</h3>
+          <ul>
+            <li data-i18n="ge_1">Разговорный английский с нуля до Advanced</li>
+            <li data-i18n="ge_2">3 урока в неделю по 90 минут</li>
+            <li data-i18n="ge_3">Группы до 10 человек</li>
+          </ul>
+          <div class="price"><b>650 000</b><small data-i18n="per_month">сум / мес</small></div>
+        </article>
+        <article class="card course featured">
+          <span class="tag" data-i18n="tag_popular">Популярный</span>
+          <h3>IELTS</h3>
+          <ul>
+            <li data-i18n="ie_1">Подготовка к IELTS 6.5+</li>
+            <li data-i18n="ie_2">Пробные экзамены каждый месяц</li>
+            <li data-i18n="ie_3">Проверка Writing и Speaking</li>
+          </ul>
+          <div class="price"><b>850 000</b><small data-i18n="per_month">сум / мес</small></div>
+        </article>
+        <article class="card course">
+          <span class="tag" data-i18n="tag_kids">7–12 лет</span>
+          <h3>Kids English</h3>
+          <ul>
+            <li data-i18n="ki_1">Игровой формат обучения</li>
+            <li data-i18n="ki_2">Отчёт для родителей каждый месяц</li>
+            <li data-i18n="ki_3">Группы до 8 детей</li>
+          </ul>
+          <div class="price"><b>550 000</b><small data-i18n="per_month">сум / мес</small></div>
+        </article>
+        <article class="card course">
+          <span class="tag" data-i18n="tag_b1">От уровня B1</span>
+          <h3>Speaking Club</h3>
+          <ul>
+            <li data-i18n="sc_1">Только разговорная практика</li>
+            <li data-i18n="sc_2">Носители языка в гостях</li>
+            <li data-i18n="sc_3">2 встречи в неделю</li>
+          </ul>
+          <div class="price"><b>300 000</b><small data-i18n="per_month">сум / мес</small></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="soft">
+    <div class="container">
+      <h2 data-i18n="why_title">Почему выбирают нас</h2>
+      <div class="grid grid-2" style="margin-top:24px">
+        <div class="why"><div class="ico">🎯</div><div><h3 data-i18n="why1_t">Гарантия результата</h3><p data-i18n="why1_d">Если не достигнете целевого балла IELTS, следующий месяц бесплатно.</p></div></div>
+        <div class="why"><div class="ico">👥</div><div><h3 data-i18n="why2_t">Маленькие группы</h3><p data-i18n="why2_d">До 10 человек, поэтому каждый говорит на уроке.</p></div></div>
+        <div class="why"><div class="ico">📍</div><div><h3 data-i18n="why3_t">Удобное расположение</h3><p data-i18n="why3_d">Рядом с метро, есть утренние и вечерние группы.</p></div></div>
+        <div class="why"><div class="ico">📱</div><div><h3 data-i18n="why4_t">Онлайн-поддержка</h3><p data-i18n="why4_d">Домашние задания и вопросы преподавателю в Telegram.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="teachers">
+    <div class="container">
+      <h2 data-i18n="teachers_title">Преподаватели</h2>
+      <p class="section-lead" data-i18n="teachers_lead">Все преподаватели сдали IELTS на высокий балл и имеют опыт от 3 лет.</p>
+      <div class="grid grid-2 grid-3">
+        <div class="card teacher"><div class="avatar" style="background:#0b2a5b">M</div><span class="score">IELTS 8.5</span><h3 data-i18n="t1_n">Малика</h3><p data-i18n="t1_d">IELTS, Writing. Опыт 7 лет</p></div>
+        <div class="card teacher"><div class="avatar" style="background:#2563eb">J</div><span class="score">IELTS 8.0</span><h3 data-i18n="t2_n">Жасур</h3><p data-i18n="t2_d">General English, Speaking. Опыт 5 лет</p></div>
+        <div class="card teacher"><div class="avatar" style="background:#e0a100">D</div><span class="score">CELTA</span><h3 data-i18n="t3_n">Дилноза</h3><p data-i18n="t3_d">Kids English. Опыт 4 года</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="results" class="soft">
+    <div class="container">
+      <h2 data-i18n="results_title">Результаты учеников</h2>
+      <p class="section-lead" data-i18n="results_lead">Баллы IELTS наших выпускников за последний год.</p>
+      <div class="results">
+        <div class="result"><b>8.0</b><span data-i18n="r1">Азиз, поступил в UK</span></div>
+        <div class="result"><b>7.5</b><span data-i18n="r2">Камила, грант в Корею</span></div>
+        <div class="result"><b>7.0</b><span data-i18n="r3">Тимур, Вестминстер</span></div>
+        <div class="result"><b>7.5</b><span data-i18n="r4">Севара, Inha</span></div>
+      </div>
+      <div class="grid grid-2" style="margin-top:24px">
+        <div class="card review"><div class="stars">★★★★★</div><p data-i18n="rev1">«За 4 месяца поднял балл с 5.5 до 7.0. Особенно помогла проверка эссе».</p><span class="who" data-i18n="rev1_w">Азиз, 18 лет</span></div>
+        <div class="card review"><div class="stars">★★★★★</div><p data-i18n="rev2">«Сын ходит на Kids English с удовольствием и уже не боится говорить».</p><span class="who" data-i18n="rev2_w">Нилуфар, мама ученика</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2 data-i18n="faq_title">Частые вопросы</h2>
+      <div style="margin-top:20px;max-width:760px">
+        <details><summary data-i18n="q1">Пробный урок правда бесплатный?</summary><p data-i18n="a1">Да. На нём мы определим ваш уровень и покажем, как проходят занятия. Ни к чему не обязывает.</p></details>
+        <details><summary data-i18n="q2">Я совсем не знаю английский. Мне подойдёт?</summary><p data-i18n="a2">Да, есть группы с нуля (Beginner). Начнём с самых основ.</p></details>
+        <details><summary data-i18n="q3">Можно платить частями?</summary><p data-i18n="a3">Оплата помесячно: наличными, картой, через Click или Payme.</p></details>
+        <details><summary data-i18n="q4">Есть онлайн-занятия?</summary><p data-i18n="a4">Да, для IELTS и Speaking Club есть онлайн-группы в Zoom.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="soft">
+    <div class="container contact-grid">
+      <div>
+        <h2 data-i18n="contact_title">Запишитесь на бесплатный урок</h2>
+        <p class="section-lead" data-i18n="contact_lead">Оставьте заявку, и администратор перезвонит в течение 15 минут в рабочее время.</p>
+        <ul class="contact-list">
+          <li><span class="ico">📍</span><span data-i18n="addr">г. Ташкент, адрес центра (демо)</span></li>
+          <li><span class="ico">🕘</span><span data-i18n="hours">Пн–Сб: 9:00–20:00</span></li>
+          <li><span class="ico">📞</span><a href="tel:+998000000000">+998 (00) 000-00-00</a></li>
+          <li><span class="ico">✈️</span><a href="https://t.me/" target="_blank" rel="noopener">Telegram</a></li>
+        </ul>
+      </div>
+      <div class="card">
+        <form id="lead-form" novalidate>
+          <label><span data-i18n="f_name">Ваше имя</span>
+            <input name="name" autocomplete="name" required maxlength="60">
+          </label>
+          <label><span data-i18n="f_phone">Телефон</span>
+            <input name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+998 __ ___ __ __" required maxlength="20">
+          </label>
+          <label><span data-i18n="f_course">Курс</span>
+            <select name="course">
+              <option>General English</option>
+              <option>IELTS</option>
+              <option>Kids English</option>
+              <option>Speaking Club</option>
+            </select>
+          </label>
+          <button class="btn btn-primary" type="submit" data-i18n="f_submit">Записаться на пробный урок</button>
+          <p class="form-note" data-i18n="f_note">Нажимая кнопку, вы соглашаетесь на обработку контактных данных.</p>
+          <div class="form-ok" id="form-ok" role="status"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <span>© 2026 Bright English</span>
+    <span data-i18n="footer">Демо-сайт. Сделано для портфолио.</span>
+  </div>
+</footer>
+
+<nav class="mobile-bar" aria-label="Быстрые действия">
+  <a class="btn btn-navy" href="tel:+998000000000" data-i18n="call">📞 Позвонить</a>
+  <a class="btn btn-tg" href="https://t.me/" target="_blank" rel="noopener">✈️ Telegram</a>
+</nav>
+
+<script>
+const T = {
+  ru: {}, // заполняется из разметки при загрузке
+  uz: {
+    demo:"Namuna sayt · nomi va ma'lumotlar o'ylab topilgan",
+    nav_courses:"Kurslar", nav_teachers:"O'qituvchilar", nav_results:"Natijalar", nav_contact:"Aloqa",
+    cta_short:"Sinov darsi",
+    hero_title:"Ingliz tilida <span>ishonch bilan</span> gapiring",
+    hero_lead:"Toshkentda General English kurslari va IELTSga tayyorgarlik. Kichik guruhlar, kuchli o'qituvchilar va aniq natija.",
+    cta_trial:"Bepul sinov darsi", cta_courses:"Kurslarni ko'rish",
+    stat_ielts:"o'rtacha IELTS", stat_students:"bitiruvchi", stat_years:"yillik tajriba",
+    courses_title:"Kurslar va narxlar",
+    courses_lead:"Bepul sinov darsida darajangizni aniqlab, mos guruhni tanlaymiz.",
+    tag_all:"Barcha darajalar", tag_popular:"Ommabop", tag_kids:"7–12 yosh", tag_b1:"B1 darajadan",
+    ge_1:"Noldan Advanced darajagacha so'zlashuv ingliz tili", ge_2:"Haftasiga 3 ta dars, 90 daqiqadan", ge_3:"Guruhda 10 kishigacha",
+    ie_1:"IELTS 6.5+ ga tayyorgarlik", ie_2:"Har oy sinov imtihonlari", ie_3:"Writing va Speaking tekshiruvi",
+    ki_1:"O'yin shaklida o'qitish", ki_2:"Har oy ota-onalar uchun hisobot", ki_3:"Guruhda 8 bolagacha",
+    sc_1:"Faqat og'zaki amaliyot", sc_2:"Ona tili ingliz bo'lgan mehmonlar", sc_3:"Haftasiga 2 ta uchrashuv",
+    per_month:"so'm / oy",
+    why_title:"Nega bizni tanlashadi",
+    why1_t:"Natija kafolati", why1_d:"Maqsadli IELTS balliga erishmasangiz, keyingi oy bepul.",
+    why2_t:"Kichik guruhlar", why2_d:"10 kishigacha, shuning uchun darsda har kim gapiradi.",
+    why3_t:"Qulay joylashuv", why3_d:"Metro yonida, ertalabki va kechki guruhlar bor.",
+    why4_t:"Onlayn yordam", why4_d:"Uy vazifalari va savollar Telegramda o'qituvchiga.",
+    teachers_title:"O'qituvchilar", teachers_lead:"Barcha o'qituvchilar IELTSni yuqori ballga topshirgan va kamida 3 yillik tajribaga ega.",
+    t1_n:"Malika", t1_d:"IELTS, Writing. 7 yillik tajriba",
+    t2_n:"Jasur", t2_d:"General English, Speaking. 5 yillik tajriba",
+    t3_n:"Dilnoza", t3_d:"Kids English. 4 yillik tajriba",
+    results_title:"O'quvchilar natijalari", results_lead:"Bitiruvchilarimizning so'nggi bir yildagi IELTS ballari.",
+    r1:"Aziz, Buyuk Britaniyaga o'qishga kirdi", r2:"Kamila, Koreyaga grant", r3:"Temur, Vestminster", r4:"Sevara, Inha",
+    rev1:"«4 oyda ballimni 5.5 dan 7.0 ga ko'tardim. Ayniqsa esse tekshiruvi yordam berdi».", rev1_w:"Aziz, 18 yosh",
+    rev2:"«O'g'lim Kids Englishga mamnuniyat bilan boradi va endi gapirishdan qo'rqmaydi».", rev2_w:"Nilufar, o'quvchining onasi",
+    faq_title:"Ko'p beriladigan savollar",
+    q1:"Sinov darsi haqiqatan bepulmi?", a1:"Ha. Unda darajangizni aniqlaymiz va darslar qanday o'tishini ko'rsatamiz. Hech narsaga majbur qilmaydi.",
+    q2:"Men umuman ingliz tilini bilmayman. Menga mos keladimi?", a2:"Ha, noldan boshlovchilar (Beginner) guruhlari bor. Eng asoslaridan boshlaymiz.",
+    q3:"Bo'lib to'lash mumkinmi?", a3:"To'lov oylik: naqd, karta, Click yoki Payme orqali.",
+    q4:"Onlayn darslar bormi?", a4:"Ha, IELTS va Speaking Club uchun Zoomda onlayn guruhlar bor.",
+    contact_title:"Bepul darsga yoziling", contact_lead:"Ariza qoldiring, administrator ish vaqtida 15 daqiqa ichida qo'ng'iroq qiladi.",
+    addr:"Toshkent sh., markaz manzili (namuna)", hours:"Du–Sha: 9:00–20:00",
+    f_name:"Ismingiz", f_phone:"Telefon", f_course:"Kurs", f_submit:"Sinov darsiga yozilish",
+    f_note:"Tugmani bosish orqali aloqa ma'lumotlaringizni qayta ishlashga rozilik bildirasiz.",
+    footer:"Namuna sayt. Portfolio uchun tayyorlangan.", call:"📞 Qo'ng'iroq",
+    ok:"Rahmat! Arizangiz qabul qilindi, tez orada qo'ng'iroq qilamiz.",
+    ok_demo:"Rahmat! (Namuna rejimi: ariza hech qayerga yuborilmadi.)",
+    err_fields:"Iltimos, ism va telefon raqamini to'g'ri kiriting.",
+    title:"Bright English — Toshkentda ingliz tili va IELTS kurslari"
+  }
+};
+Object.assign(T.ru, {
+  ok:"Спасибо! Заявка принята, скоро перезвоним.",
+  ok_demo:"Спасибо! (Демо-режим: заявка никуда не отправлена.)",
+  err_fields:"Пожалуйста, укажите имя и корректный номер телефона.",
+  title:document.title
+});
+document.querySelectorAll('[data-i18n]').forEach(el => T.ru[el.dataset.i18n] = el.textContent);
+document.querySelectorAll('[data-i18n-html]').forEach(el => T.ru[el.dataset.i18nHtml] = el.innerHTML);
+
+let lang = 'ru';
+function setLang(l){
+  lang = l;
+  const d = T[l];
+  document.documentElement.lang = l;
+  document.querySelectorAll('[data-i18n]').forEach(el => { if (d[el.dataset.i18n]) el.textContent = d[el.dataset.i18n]; });
+  document.querySelectorAll('[data-i18n-html]').forEach(el => { if (d[el.dataset.i18nHtml]) el.innerHTML = d[el.dataset.i18nHtml]; });
+  document.querySelectorAll('[data-lang]').forEach(b => b.setAttribute('aria-pressed', b.dataset.lang === l));
+  document.title = d.title;
+  try { localStorage.setItem('lang', l); } catch (e) {}
+}
+document.querySelectorAll('[data-lang]').forEach(b => b.addEventListener('click', () => setLang(b.dataset.lang)));
+try { const saved = localStorage.getItem('lang'); if (saved === 'uz') setLang('uz'); } catch (e) {}
+
+// Форма заявки: отправляет на /api/lead (Cloudflare Pages Function → Telegram)
+const form = document.getElementById('lead-form');
+const ok = document.getElementById('form-ok');
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const data = Object.fromEntries(new FormData(form));
+  const digits = (data.phone || '').replace(/\D/g, '');
+  if (!data.name.trim() || digits.length < 9) {
+    ok.style.display = 'block'; ok.style.background = '#fdecec'; ok.style.borderColor = '#f5b5b5'; ok.style.color = '#7f1d1d';
+    ok.textContent = T[lang].err_fields;
+    return;
+  }
+  const btn = form.querySelector('button'); btn.disabled = true;
+  let msg = T[lang].ok_demo;
+  try {
+    const r = await fetch('/api/lead', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(data) });
+    const j = await r.json();
+    if (r.ok && j.ok && !j.demo) msg = T[lang].ok;
+  } catch (err) { /* бэкенд не настроен — демо-режим */ }
+  ok.removeAttribute('style'); ok.style.display = 'block';
+  ok.textContent = msg;
+  form.reset(); btn.disabled = false;
+});
+</script>
+</body>
+</html>

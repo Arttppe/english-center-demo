@@ -7,5 +7,6 @@
     "directory": "./public",
     "binding": "ASSETS"
   },
-  "workers_dev": true
+  "workers_dev": true,
+  "previews": {}
 }
